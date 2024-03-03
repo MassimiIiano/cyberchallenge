@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Sat Mar 02 13:48:49 CET 2024
+OS\ Name=Linux
+OS\ Version=5.15.133.1-microsoft-standard-WSL2
+Username=spatola
+Hostname=HALMAX-1000
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=3/2/24, 1\:48 PM
