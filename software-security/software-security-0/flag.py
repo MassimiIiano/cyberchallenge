@@ -8,3 +8,11 @@ original_input = [k ^ f for k, f in zip(key, flag)]
 original_input_as_string = ''.join(chr(i) for i in original_input)
 
 print(original_input_as_string)
+
+str = "[1243,2,3]"
+str = str.replace("[", "")
+str = str.replace("]", "")
+str = str.split(",")
+
+for int(s) in str:
+    print(s)
