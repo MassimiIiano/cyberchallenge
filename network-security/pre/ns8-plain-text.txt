@@ -1,0 +1,346 @@
+No.     Time           Source                Destination           Protocol Length Info
+      3 0.000131       192.168.100.1         192.168.100.2         TCP      74     46510 → 9001 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=1777526226 TSecr=0 WS=128
+
+Frame 3: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f), Dst: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64)
+Internet Protocol Version 4, Src: 192.168.100.1, Dst: 192.168.100.2
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 60
+    Identification: 0x0e38 (3640)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xe32f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.1
+    Destination Address: 192.168.100.2
+Transmission Control Protocol, Src Port: 46510, Dst Port: 9001, Seq: 0, Len: 0
+    Source Port: 46510
+    Destination Port: 9001
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 2581051987
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1010 .... = Header Length: 40 bytes (10)
+    Flags: 0x002 (SYN)
+    Window: 64240
+    [Calculated window size: 64240]
+    Checksum: 0x4983 [correct] (matches partial checksum, not 0x86f2, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+    [Timestamps]
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 0.000213       192.168.100.2         192.168.100.1         TCP      74     9001 → 46510 [SYN, ACK] Seq=0 Ack=1 Win=65160 Len=0 MSS=1460 SACK_PERM TSval=3783931454 TSecr=1777526226 WS=128
+
+Frame 4: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64), Dst: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f)
+Internet Protocol Version 4, Src: 192.168.100.2, Dst: 192.168.100.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 60
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xf167 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.2
+    Destination Address: 192.168.100.1
+Transmission Control Protocol, Src Port: 9001, Dst Port: 46510, Seq: 0, Ack: 1, Len: 0
+    Source Port: 9001
+    Destination Port: 46510
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 285765603
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 2581051988
+    1010 .... = Header Length: 40 bytes (10)
+    Flags: 0x012 (SYN, ACK)
+    Window: 65160
+    [Calculated window size: 65160]
+    Checksum: 0x4983 [correct] (matches partial checksum, not 0xea94, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 0.000279       192.168.100.1         192.168.100.2         TCP      66     46510 → 9001 [ACK] Seq=1 Ack=1 Win=64256 Len=0 TSval=1777526226 TSecr=3783931454
+
+Frame 5: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f), Dst: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64)
+Internet Protocol Version 4, Src: 192.168.100.1, Dst: 192.168.100.2
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x0e39 (3641)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xe336 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.1
+    Destination Address: 192.168.100.2
+Transmission Control Protocol, Src Port: 46510, Dst Port: 9001, Seq: 1, Ack: 1, Len: 0
+    Source Port: 46510
+    Destination Port: 9001
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2581051988
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 285765604
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+    Window: 502
+    [Calculated window size: 64256]
+    [Window size scaling factor: 128]
+    Checksum: 0x497b [correct] (matches partial checksum, not 0x15f4, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 0.000417       192.168.100.1         192.168.100.2         TCP      218    46510 → 9001 [PSH, ACK] Seq=1 Ack=1 Win=64256 Len=152 TSval=1777526226 TSecr=3783931454
+
+Frame 6: 218 bytes on wire (1744 bits), 218 bytes captured (1744 bits)
+Ethernet II, Src: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f), Dst: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64)
+Internet Protocol Version 4, Src: 192.168.100.1, Dst: 192.168.100.2
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 204
+    Identification: 0x0e3a (3642)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xe29d [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.1
+    Destination Address: 192.168.100.2
+Transmission Control Protocol, Src Port: 46510, Dst Port: 9001, Seq: 1, Ack: 1, Len: 152
+    Source Port: 46510
+    Destination Port: 9001
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 152]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2581051988
+    [Next Sequence Number: 153    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 285765604
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+    Window: 502
+    [Calculated window size: 64256]
+    [Window size scaling factor: 128]
+    Checksum: 0x4a13 [correct] (matches partial checksum, not 0x0dae, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (152 bytes)
+Data (152 bytes)
+
+0000  1f 8b 08 00 71 03 60 62 00 03 ed d1 41 0a c2 30   ....q.`b....A..0
+0010  10 85 e1 ac 3d 45 bc 80 cc 34 89 5d 2b 78 8e 10   ....=E...4.]+x..
+0020  84 ba 11 0b 69 84 16 e9 dd 0d 82 1b 11 5d 15 11   ....i........]..
+0030  fe 6f f3 06 66 f3 98 e9 ce e9 b4 29 63 31 0b 92   .o..f......)c1..
+0040  6a eb fd 23 ab d7 14 f1 62 d4 37 ae 4e 1a a4 35   j..#....b.7.N..5
+0050  a2 da a8 18 2b 4b 96 7a ba 0e 25 65 6b 4d ee fb   ....+K.z..%ekM..
+0060  8f 47 f8 b6 ff 53 5d fd ff 6d 3f 15 17 e2 61 6c   .G...S]..m?...al
+0070  f3 ee 58 54 2e 51 87 e8 52 98 d6 f3 ea d7 fd 00   ..XT.Q..R.......
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 ef dd 01   ................
+0090  48 a5 cf b9 00 28 00 00                           H....(..
+    Data [truncated]: 1f8b0800710360620003edd1410ac2301085e1ac3d45bc80cc34895d2b788e1084ba110b698416e9dd0d821b115d1511fe6ff30666f398e9cee9b42963310b926aebfd23abd714f162d437ae4e1aa435a2daa8182b4b967aba0e25656b4deefb8f47f8b6ff535dfdff6d3f1517e26
+    [Length: 152]
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 0.000464       192.168.100.2         192.168.100.1         TCP      66     9001 → 46510 [ACK] Seq=1 Ack=153 Win=65024 Len=0 TSval=3783931454 TSecr=1777526226
+
+Frame 7: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64), Dst: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f)
+Internet Protocol Version 4, Src: 192.168.100.2, Dst: 192.168.100.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xbd0f (48399)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x3460 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.2
+    Destination Address: 192.168.100.1
+Transmission Control Protocol, Src Port: 9001, Dst Port: 46510, Seq: 1, Ack: 153, Len: 0
+    Source Port: 9001
+    Destination Port: 46510
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 285765604
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 153    (relative ack number)
+    Acknowledgment number (raw): 2581052140
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+    Window: 508
+    [Calculated window size: 65024]
+    [Window size scaling factor: 128]
+    Checksum: 0x497b [correct] (matches partial checksum, not 0x1556, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 5.462109       192.168.100.1         192.168.100.2         TCP      66     46510 → 9001 [FIN, ACK] Seq=153 Ack=1 Win=64256 Len=0 TSval=1777531688 TSecr=3783931454
+
+Frame 10: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f), Dst: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64)
+Internet Protocol Version 4, Src: 192.168.100.1, Dst: 192.168.100.2
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x0e3b (3643)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xe334 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.1
+    Destination Address: 192.168.100.2
+Transmission Control Protocol, Src Port: 46510, Dst Port: 9001, Seq: 153, Ack: 1, Len: 0
+    Source Port: 46510
+    Destination Port: 9001
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 153    (relative sequence number)
+    Sequence Number (raw): 2581052140
+    [Next Sequence Number: 154    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 285765604
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x011 (FIN, ACK)
+    Window: 502
+    [Calculated window size: 64256]
+    [Window size scaling factor: 128]
+    Checksum: 0x497b [correct] (matches partial checksum, not 0x0005, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [Timestamps]
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 5.462330       192.168.100.2         192.168.100.1         TCP      66     9001 → 46510 [FIN, ACK] Seq=1 Ack=154 Win=65024 Len=0 TSval=3783936916 TSecr=1777531688
+
+Frame 11: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64), Dst: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f)
+Internet Protocol Version 4, Src: 192.168.100.2, Dst: 192.168.100.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xbd10 (48400)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x345f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.2
+    Destination Address: 192.168.100.1
+Transmission Control Protocol, Src Port: 9001, Dst Port: 46510, Seq: 1, Ack: 154, Len: 0
+    Source Port: 9001
+    Destination Port: 46510
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 285765604
+    [Next Sequence Number: 2    (relative sequence number)]
+    Acknowledgment Number: 154    (relative ack number)
+    Acknowledgment number (raw): 2581052141
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x011 (FIN, ACK)
+    Window: 508
+    [Calculated window size: 65024]
+    [Window size scaling factor: 128]
+    Checksum: 0x497b [correct] (matches partial checksum, not 0xeaa7, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 5.462458       192.168.100.1         192.168.100.2         TCP      66     46510 → 9001 [ACK] Seq=154 Ack=2 Win=64256 Len=0 TSval=1777531688 TSecr=3783936916
+
+Frame 12: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 5e:2e:af:87:60:6f (5e:2e:af:87:60:6f), Dst: 8a:e6:e1:d7:24:64 (8a:e6:e1:d7:24:64)
+Internet Protocol Version 4, Src: 192.168.100.1, Dst: 192.168.100.2
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x0e3c (3644)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xe333 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.1
+    Destination Address: 192.168.100.2
+Transmission Control Protocol, Src Port: 46510, Dst Port: 9001, Seq: 154, Ack: 2, Len: 0
+    Source Port: 46510
+    Destination Port: 9001
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 154    (relative sequence number)
+    Sequence Number (raw): 2581052141
+    [Next Sequence Number: 154    (relative sequence number)]
+    Acknowledgment Number: 2    (relative ack number)
+    Acknowledgment number (raw): 285765605
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+    Window: 502
+    [Calculated window size: 64256]
+    [Window size scaling factor: 128]
+    Checksum: 0x497b [correct] (matches partial checksum, not 0xeaad, likely caused by "TCP checksum offload")
+    [Checksum Status: Good]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [Timestamps]
+    [SEQ/ACK analysis]
