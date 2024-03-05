@@ -14,3 +14,5 @@ then compress the bytes to a file and open it with a hex editor
 go to tls preferences and set the key file select the key file
 
 ## NS 10: Extract objects
+find http package
+then in MIME go to the portable network graphics decompress it
