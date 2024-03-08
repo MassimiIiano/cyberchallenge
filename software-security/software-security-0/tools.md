@@ -18,3 +18,11 @@
 
 call with `gdb <program>` or for running programms `gdb -p <pid>`
 
+## pwntools
+exploit writing as simple as possible
+
+- tubes (i/o port wrapper)
+  - serial I/O ports
+  - process running on ssh
+  - romote tcp or udp
+  - local processes (pipe)
