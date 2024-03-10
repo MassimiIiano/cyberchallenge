@@ -1,7 +1,6 @@
 def rol(n: bytes, rotations: int):
-    width = 8
-    rotations %= width
-    n = ((n << rotations) & (2**width - 1)) | (n >> (width - rotations))
+    rotations %= 8
+    n = ((n << rotations) & (2**8 - 1)) | (n >> (8 - rotations))
     return n
 
 # f = open('flag.txt.aes', 'rb')
