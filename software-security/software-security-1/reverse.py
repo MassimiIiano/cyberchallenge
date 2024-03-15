@@ -9,10 +9,13 @@ def rol(n: bytes, rotations: int) -> int:
 # 10101010 >> 6 = 00000010
 # 00101000 | 00000010 = 00101010
 
-f = open('flag.txt.aes', 'rb')
-CRYP_FLAG = f.read()
-
+# f = open('flag.txt.aes', 'rb')
+# CRYP_FLAG = f.read()
+# 
 flag = ''
+# byt: b = 0b10101010
+# p = byt >> 7
+# byt = (byt << 1) | p
     
 
 with open('flag.txt.aes', 'rb') as f:

