@@ -1,0 +1,2 @@
+0x08048606: pop eax; int 0x80;
+0x0804860c: pop edx; ret;
