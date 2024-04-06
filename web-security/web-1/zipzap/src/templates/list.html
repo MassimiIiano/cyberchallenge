@@ -1,0 +1,91 @@
+{% extends 'base.html'%}
+{% block section %}
+
+<div class="columns">
+    <div class="column"></div>
+    <div class="column is-one-quarter ">
+        <div class=" container">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="field is-grouped">
+
+                    <div class="control">
+                        <div class="file">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="zip">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose a zip file...
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        {% with messages = get_flashed_messages() %}
+
+                        {% if messages %}
+                        <p class="help is-danger">
+                            <ul class=flashes>
+                                {% for message in messages %}
+                                <p class="help">{{ message }}</p>
+                                {% endfor %}
+                            </ul>
+                        </p>
+                        {% endif %}
+
+                        {% endwith %}
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-link">Upload</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="column is-half">
+        {% if not files|length %}
+        No files. Please upload some!
+        {% else %}
+        <table class="table is-fullwidth is-hoverable">
+            <thead>
+                <tr>
+                    <td>Files</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for f in files %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('show',f=f,uid=uid) }}">{{f}}</a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('remove', f=f, uid=uid)}}">
+                            <span class="icon has-text-danger">
+                                <i class="fas fa-ban"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <a href="{{ url_for('zip',uid=uid) }}" class="button is-info">Download all</a>
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+
+        </table>
+        {% endif %}
+    </div>
+    <div class="column"></div>
+</div>
+
+{% endblock %}
