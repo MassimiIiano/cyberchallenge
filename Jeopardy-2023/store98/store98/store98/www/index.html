@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Store98</title>
+		<link rel="icon" href="/assets/images/favicon.png" />
+
+		<link rel="stylesheet" href="https://unpkg.com/98.css" />
+		<!-- Add the stylesheet to the head -->
+		<link rel="stylesheet" type="text/css" href="./assets/clippy.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/main.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/wordart.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Menu</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="window-body" style="display: flex; flex-direction: column">
+					<ul class="tree-view" style="flex: 1 1 0px">
+						<li><a href="/">Home</a></li>
+						<li><a href="/">Store</a></li>
+						<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Flag</a></li>
+						<li>
+							<details>
+								<summary>Clippy</summary>
+								<ul class="clippy-actions"></ul>
+							</details>
+						</li>
+						<li>
+							<details>
+								<summary>Special Thanks</summary>
+								<ul>
+									<li><a href="https://jdan.github.io/98.css/" target="_blank">98.css</a></li>
+									<li><a href="https://win98icons.alexmeub.com/" target="_blank">Icons</a></li>
+									<li><a href="https://github.com/pi0/clippyjs" target="_blank">Clippy</a></li>
+									<li><a href="https://www.makewordart.com/" ,target="_blank">WordArt online</a></li>
+								</ul>
+							</details>
+						</li>
+					</ul>
+					<div>
+						<h4 style="margin: 0.75em 0 0.5em 0; text-align: center" id="loginTitle">Login</h4>
+						<form action="/" id="loginForm">
+							<fieldset>
+								<div class="field-row-stacked">
+									<label for="username">Username:</label>
+									<input id="username" type="text" />
+								</div>
+								<div class="field-row-stacked">
+									<label for="password">Password:</label>
+									<input id="password" type="password" />
+								</div>
+								<div class="field-row" style="display: flex; gap: 2em; padding: 0.5em 0">
+									<input id="login" type="radio" name="login-register" checked />
+									<label for="login">Login</label>
+									<input id="register" type="radio" name="login-register" />
+									<label for="register">Register</label>
+								</div>
+								<div class="field-row" id="loginError">
+									There was an error. Please don't ask for more details.
+								</div>
+								<div class="field-row">
+									<button>Submit</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Content</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="window-body">
+					<h1 style="margin: 0; text-align: center">
+						<img src="/assets/images/computer-5.png" alt="" />
+						<img src="/assets/images/logo.png" alt="" style="height: 6rem" />
+						<img src="/assets/images/computer-5.png" alt="" />
+					</h1>
+					<form action="/" id="searchForm">
+						<div class="field-row">
+							<label for="search">Search item</label>
+							<input id="search" type="text" autofocus />
+							<button style="display: flex; align-items: center; gap: 0.5em" type="submit">
+								Search
+								<img src="/assets/images/magnifying_glass_4-0.png" alt="" height="12" width="12" />
+							</button>
+						</div>
+					</form>
+
+					<div id="flagContainer"></div>
+
+					<h4 style="margin: 0.8em 0">Results</h4>
+
+					<div class="products"></div>
+				</div>
+
+				<div class="status-bar">
+					<p class="status-bar-field">Press F1 for help</p>
+					<p class="status-bar-field">You are visitor number 1337!</p>
+					<p class="status-bar-field">CPU Usage: <span id="cpu">14</span>%</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Add these scripts to  the bottom of the page -->
+		<script src="https://unpkg.com/jquery@3.2.1"></script>
+
+		<script src="https://unpkg.com/clippyjs@latest"></script>
+
+		<script src="/assets/clippy.js"></script>
+		<script src="/assets/search.js"></script>
+		<script src="/assets/login.js"></script>
+
+		<script type="text/javascript">
+			setInterval(() => {
+				document.querySelector('#cpu').innerText = Math.floor(Math.random() * 100);
+			}, 1000);
+
+			search();
+		</script>
+	</body>
+</html>

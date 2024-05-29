@@ -15,6 +15,6 @@ def dec(cipher):
     print(res)
 
 if __name__ == '__main__':
-    with open('/workspaces/cyberchallenge/Jeopardy-2023/apprentice/apprentice_output.txt', 'rw') as wf:
+    with open('/workspaces/cyberchallenge/Jeopardy-2023/apprentice/apprentice_output.txt', 'r') as wf:
         print(dec(wf.read()))
 
