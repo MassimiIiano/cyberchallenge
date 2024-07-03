@@ -350,6 +350,9 @@ def register(user: UserModel):
 
 @app.post("/login")
 def login(user: UserLogin):
+    if (len(user.password) < 6):
+        raise InvalidCredentialsException
+    
     info = storage.user_auth(user.username, user.password)
     if info == None:
         raise InvalidCredentialsException
